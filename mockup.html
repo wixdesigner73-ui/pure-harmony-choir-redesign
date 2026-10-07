@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pure Harmony Choir — Design Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --ivory:#F6F1E7; --ink:#1E1C1A; --black:#0B0A09;
+  --gold:#B8935A; --gold-deep:#8A6A36; --gold-light:#D2B27A;
+  --muted:#5E574E; --hair:#DCD2BF; --hair-dark:#2E2A25;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Montserrat',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* ---------- type ---------- */
+.eyebrow{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:500}
+.on-dark .eyebrow{color:var(--gold-light)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;color:var(--ink)}
+.on-dark h1,.on-dark h2,.on-dark h3{color:#F3ECDD}
+.rule{width:56px;height:1px;background:var(--gold);margin:28px auto}
+.rule.left{margin-left:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;padding:16px 38px;border:1px solid var(--ink);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:background .35s,color .35s,border-color .35s;cursor:pointer;background:transparent;color:var(--ink);font-family:var(--sans)}
+.btn.solid{background:var(--ink);color:#F6F1E7}
+.btn.solid:hover{background:var(--gold);border-color:var(--gold);color:var(--black)}
+.btn.line:hover{background:var(--ink);color:#F6F1E7}
+.on-dark .btn{border-color:var(--gold);color:var(--gold-light)}
+.on-dark .btn:hover{background:var(--gold);color:var(--black)}
+
+/* ---------- header ---------- */
+header{background:var(--white);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20}
+.nav{max-width:1180px;margin:0 auto;height:88px;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:16px}
+.brand img{width:62px;height:62px}
+.brand span{font-family:var(--serif);font-size:20px;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+nav ul{list-style:none;display:flex;gap:44px}
+nav a{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:8px 0;border-bottom:1px solid transparent;transition:color .3s,border-color .3s;color:var(--ink)}
+nav a:hover{color:var(--gold-deep)}
+nav a.active{border-bottom-color:var(--gold)}
+
+/* ---------- pages ---------- */
+.page{display:none}.page.show{display:block}
+.fade{animation:fade .9s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* hero */
+.hero{background:var(--white);text-align:center;padding:84px 0 0}
+.hero h1{font-weight:300;font-size:104px;letter-spacing:-.005em}
+.hero .tag{font-size:14px;letter-spacing:.34em;text-transform:uppercase;font-weight:500;margin-top:6px}
+.hero .loc{font-size:11.5px;letter-spacing:.3em;color:var(--muted);margin-top:12px;font-weight:500}
+.hero .ctas{display:flex;gap:18px;justify-content:center;margin-top:40px}
+.hero .photo{margin-top:34px;height:780px;width:100%;object-fit:contain;object-position:50% 100%}
+
+/* split sections */
+.band{padding:110px 0}
+.band.dark{background:var(--black)}
+.split{display:grid;grid-template-columns:7fr 5fr;gap:80px;align-items:center}
+.frame{position:relative}
+.frame::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold);z-index:0;pointer-events:none}
+.frame img{position:relative;z-index:1;width:100%}
+.split h2{font-size:34px;font-style:italic;font-weight:300;line-height:1.28;margin:18px 0 34px}
+
+/* home gallery */
+.seal{width:210px;margin:0 auto;border:1px solid var(--gold);padding:10px}
+.seal img{width:100%}
+.dark .loc2{font-size:11.5px;letter-spacing:.34em;color:var(--gold-light);text-align:center;margin:26px 0 72px;font-weight:500}
+.stagger{display:grid;grid-template-columns:5fr 7fr;gap:36px;align-items:start}
+.stagger .a{margin-top:84px}
+.stagger img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* page title */
+.ptitle{text-align:center;padding:96px 0 70px;background:var(--ivory)}
+.ptitle h1{font-size:84px;font-weight:300}
+.ptitle.white{background:var(--white)}
+.fullimg{width:100%;height:600px;object-fit:cover}
+
+/* about */
+.mgr{display:grid;grid-template-columns:5fr 6fr;gap:84px;align-items:center}
+.mgr h2{font-size:54px;font-weight:400;margin:14px 0 0}
+.mgr .role{margin-top:10px}
+.mgr p{color:var(--muted);margin-top:0}
+.locs{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.locs figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.locs figcaption{font-family:var(--serif);font-size:30px;letter-spacing:.3em;text-align:center;color:#F3ECDD;margin-top:22px;padding-top:18px;border-top:1px solid var(--hair-dark)}
+.prose{max-width:700px;margin:0 auto;text-align:left}
+.prose p{color:var(--muted);margin-top:26px}
+.prose p.lede{font-family:var(--serif);font-size:30px;line-height:1.38;color:var(--ink);font-weight:400;margin-top:0}
+
+/* services */
+.svc{display:grid;grid-template-columns:4fr 8fr;gap:64px;padding:64px 0;border-top:1px solid var(--hair)}
+.svc:last-of-type{border-bottom:1px solid var(--hair)}
+.svc h2{font-size:46px;font-weight:400}
+.svc .item + .item{margin-top:38px;padding-top:38px;border-top:1px solid var(--hair)}
+.svc h3{font-size:27px;font-weight:500;margin-bottom:10px}
+.svc p{color:var(--muted)}
+.cta-band{text-align:center;padding:96px 0}
+
+/* contact */
+.form{background:var(--white);border:1px solid var(--hair);padding:64px 72px;max-width:800px;margin:0 auto}
+.form h2{font-size:44px;text-align:center}
+.form .intro{color:var(--muted);text-align:center;margin:0 auto 12px;max-width:600px}
+.field{margin-top:34px}
+.field>label,.field>.lbl{display:block;font-size:12px;letter-spacing:.06em;font-weight:500;color:var(--ink);margin-bottom:10px;line-height:1.6}
+.field small{display:block;color:var(--muted);font-weight:400;letter-spacing:0;font-size:12.5px;margin-top:2px}
+input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;border:0;border-bottom:1px solid #BFB39C;background:transparent;padding:10px 0;font:inherit;color:var(--ink);border-radius:0;outline:none}
+input:focus,textarea:focus,select:focus{border-bottom-color:var(--gold-deep)}
+textarea{border:1px solid #BFB39C;padding:14px;min-height:140px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.opts label{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:center}
+.opts input{accent-color:var(--ink)}
+.opts.one{grid-template-columns:1fr}
+.form .submit{text-align:center;margin-top:52px}
+
+/* footer */
+footer{background:var(--black);color:#CFC6B4;padding:84px 0 36px;text-align:center}
+footer .fname{font-family:var(--serif);font-size:30px;letter-spacing:.3em;text-transform:uppercase;color:#F3ECDD}
+footer .ftag{font-size:11px;letter-spacing:.32em;color:var(--gold-light);margin-top:10px;font-weight:500}
+footer ul{list-style:none;display:flex;gap:40px;justify-content:center;margin:40px 0 52px;flex-wrap:wrap}
+footer ul a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:#CFC6B4;transition:color .3s}
+footer ul a:hover{color:var(--gold-light)}
+footer .copy{border-top:1px solid var(--hair-dark);padding-top:26px;font-size:12px;letter-spacing:.08em;color:#8E8676}
+
+/* ---------- mobile ---------- */
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .nav{height:auto;padding:14px 20px;flex-direction:column;gap:10px}
+  .brand img{width:44px;height:44px}.brand span{font-size:15px}
+  nav ul{gap:18px}nav a{font-size:10px;letter-spacing:.14em}
+  .hero{padding-top:52px}.hero h1{font-size:46px}.hero .tag{font-size:11px;letter-spacing:.26em}
+  .hero .ctas{flex-direction:column;align-items:center;gap:12px}
+  .hero .photo{height:auto;aspect-ratio:3/2}
+  .band{padding:64px 0}
+  .split,.mgr,.svc,.locs,.stagger{grid-template-columns:1fr;gap:36px}
+  .frame::after{inset:10px -8px -10px 10px}
+  .split h2{font-size:26px}
+  .stagger .a{margin-top:0}
+  .ptitle{padding:56px 0 40px}.ptitle h1{font-size:48px}
+  .fullimg{height:300px}
+  .mgr h2{font-size:40px}
+  .svc{padding:40px 0}.svc h2{font-size:36px}
+  .form{padding:40px 24px}.opts{grid-template-columns:1fr}
+  footer ul{gap:20px}footer .fname{font-size:22px}
+  .prose p.lede{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#home"><img src="images/logo.jpg" alt="Pure Harmony Choir crest"><span>Pure Harmony Choir</span></a>
+    <nav><ul>
+      <li><a href="#home" data-p="home">Home</a></li>
+      <li><a href="#about" data-p="about">About Us</a></li>
+      <li><a href="#services" data-p="services">Our Services</a></li>
+      <li><a href="#contact" data-p="contact">Contact Us</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<!-- ================= HOME ================= -->
+<main id="home" class="page">
+  <section class="hero">
+    <div class="wrap fade">
+      <h1>Pure Harmony Choir</h1>
+      <div class="rule"></div>
+      <p class="tag">The Luxury Sound You Deserve</p>
+      <p class="loc">FLORIDA &nbsp;|&nbsp; GEORGIA</p>
+      <div class="ctas"><a class="btn solid" href="#about">About Us</a><a class="btn line" href="#contact">Contact Us</a></div>
+    </div>
+    <img class="photo fade" src="images/hero.jpg" alt="Four members of Pure Harmony Choir standing in a line, each with a hand on the shoulder of the singer in front">
+  </section>
+
+  <section class="band">
+    <div class="wrap split">
+      <div class="frame"><img src="images/gallery-1.jpg" alt="Four members of Pure Harmony Choir in black and white attire"></div>
+      <div>
+        <p class="eyebrow">About Us</p>
+        <h2>Based in West Palm Beach, FL, Pure Harmony Choir is the ultimate choice for those seeking an unforgettable, luxury musical experience for their special occasion.</h2>
+        <a class="btn solid" href="#about">About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark on-dark">
+    <div class="wrap">
+      <div class="seal"><img src="images/home-about.jpg" alt="Pure Harmony Choir crest — The Luxury Sound You Deserve"></div>
+      <p class="loc2">FLORIDA &nbsp;|&nbsp; GEORGIA</p>
+      <div class="stagger">
+        <img class="a" src="images/gallery-2.jpg" alt="Three members of Pure Harmony Choir in black beside a garden railing">
+        <img src="images/gallery-3.jpg" alt="Five members of Pure Harmony Choir in black on a garden bridge">
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= ABOUT ================= -->
+<main id="about" class="page">
+  <section class="ptitle fade"><div class="wrap"><h1>About Us</h1><div class="rule"></div></div></section>
+  <img class="fullimg" src="images/about-banner.jpg" style="object-position:70% 42%" alt="A Pure Harmony Choir vocalist singing into a microphone">
+
+  <section class="band">
+    <div class="wrap mgr">
+      <div class="frame"><img src="images/about-manager.png" alt="Leolen Newsome, Manager"></div>
+      <div>
+        <h2>Leolen Newsome</h2>
+        <p class="eyebrow role">Manager</p>
+        <div class="rule left"></div>
+        <p>Passionate about music and leadership, our manager is dedicated to keeping every performance and event organized, professional, and impactful. From coordinating rehearsals and planning, she helps create meaningful experiences that inspire audiences and strengthen community through music. Her commitment to excellence, creativity, and teamwork helps ensure every event leaves a lasting impression.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark on-dark" style="padding:90px 0">
+    <div class="wrap locs">
+      <figure><img src="images/about-florida.jpg" alt="Four members of Pure Harmony Choir, Florida"><figcaption>FLORIDA</figcaption></figure>
+      <figure><img src="images/about-georgia.jpg" alt="Members of Pure Harmony Choir at a garden gazebo, Georgia"><figcaption>GEORGIA</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap prose">
+      <p class="lede">Based in West Palm Beach, FL, Pure Harmony Choir is the ultimate choice for those seeking an unforgettable, luxury musical experience for their special occasion.</p>
+      <div class="rule left" style="margin-top:34px;margin-bottom:6px"></div>
+      <p>Pure Harmony Choir delivers a sophisticated and professional blend of soulful vocals and uplifting harmonies, designed to inspire and delight your guests. While originally comprised of family members united by a deep musical bond, the choir has gracefully expanded to include a hand-selected circle of extended family, and close friends—each bringing their own excellence, heart, and experience to the stage. This thoughtful growth allows Pure Harmony Choir to provide outstanding vocalists and musicians throughout both Florida and Georgia.</p>
+      <p>Whether you're hosting an intimate wedding or a grand celebration, Pure Harmony Choir offers a refined ensemble of five singers with a pianist to a dynamic choir of 10 singers, a pianist, and a drummer.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ================= SERVICES ================= -->
+<main id="services" class="page">
+  <section class="ptitle fade"><div class="wrap"><h1>Our Services</h1><div class="rule"></div></div></section>
+  <img class="fullimg" src="images/services-main.jpg" style="height:560px;object-position:50% 24%" alt="A member of Pure Harmony Choir in a white shirt">
+
+  <section class="band" style="padding-top:90px;padding-bottom:40px">
+    <div class="wrap">
+      <div class="svc">
+        <h2>Artistic Performance</h2>
+        <div>
+          <div class="item"><h3>Live Vocalists &amp; Music Curation</h3><p>Whether you're walking down the aisle or honoring a life well-lived, the right music transforms the moment. Our carefully selected vocalists and musicians deliver live, soul-stirring performances tailored to your event's tone and vision.</p></div>
+          <div class="item"><h3>Musical Direction</h3><p>From intimate weddings to elegant gatherings, we offer custom arrangements, vocal blends, and curated sound experiences that enhance the emotional journey of your event.</p></div>
+        </div>
+      </div>
+      <div class="svc">
+        <h2>Ceremonial Elegance</h2>
+        <div>
+          <div class="item"><h3>Wedding Officiants</h3><p>Your ceremony should feel as personal as your love story. Our officiants specialize in crafting and delivering beautiful, tailored ceremonies that honor your unique journey with warmth, style, and grace.</p></div>
+          <div class="item"><h3>Memorial Ceremony Leadership</h3><p>In times of remembrance, we offer more than words—we offer presence, poetry, and peace. Our team creates and delivers personalized tribute services that honor the life and legacy of your loved ones with heartfelt dignity.</p></div>
+        </div>
+      </div>
+      <div class="svc">
+        <h2>Cinematic Capture</h2>
+        <div>
+          <div class="item"><h3>Photography</h3><p>Our photographers specialize in timeless, editorial-style captures with an eye for authentic emotion, luxurious detail, and natural beauty.</p></div>
+          <div class="item"><h3>Videography</h3><p>More than a recap—our films tell your story. We deliver cinematic, emotionally rich highlight reels and full-length features for weddings, memorials, and special occasions.</p></div>
+        </div>
+      </div>
+      <div class="svc">
+        <h2>Custom Event Design</h2>
+        <div>
+          <div class="item"><h3>Luxury Event Stationery</h3><p>Our design team creates sophisticated printed pieces including invitations, programs, signage, and menus. Each design is crafted to reflect your vision with elegance and intention.</p></div>
+          <div class="item"><h3>Visual Branding &amp; Monograms</h3><p>Add a signature touch to your event with custom monograms, logos, or cohesive visual design across all your printed and digital elements.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band dark on-dark cta-band"><div class="wrap"><a class="btn" href="#contact">Contact Us</a></div></section>
+</main>
+
+<!-- ================= CONTACT ================= -->
+<main id="contact" class="page">
+  <section class="ptitle fade"><div class="wrap"><h1>Contact Us</h1><div class="rule"></div></div></section>
+  <img class="fullimg" src="images/contact-main.jpg" style="height:520px;object-position:50% 50%" alt="Five members of Pure Harmony Choir performing">
+
+  <section class="band" style="padding-top:90px">
+    <div class="wrap">
+      <form class="form" onsubmit="return false">
+        <h2>Booking Inquiry</h2>
+        <div class="rule"></div>
+        <p class="intro">Thank you for your interest in booking with Pure Harmony Choir for your upcoming event. Please kindly fill out the form below (be as detailed as you can) and we'll be in touch with a quote within 24-48 hours.</p>
+
+        <div class="field"><label>Name*</label><input type="text"></div>
+        <div class="field"><label>Email*</label><input type="email"></div>
+        <div class="field"><label>Phone Number*</label><input type="tel"></div>
+        <div class="field"><span class="lbl">Type of Event</span>
+          <div class="opts"><label><input type="checkbox">Wedding</label><label><input type="checkbox">Funeral</label><label><input type="checkbox">Charity Fundraiser</label><label><input type="checkbox">Concert/ Festival</label><label><input type="checkbox">Gala</label><label><input type="checkbox">Banquet</label><label><input type="checkbox">Social Gathering</label><label><input type="checkbox">Other:</label></div></div>
+        <div class="field"><label>Date and Time of Event*</label><input type="text"></div>
+        <div class="field"><label>How many hours is the choir needed? *</label><input type="text"></div>
+        <div class="field"><label>Location of Event (Name of Venue)*</label><input type="text"></div>
+        <div class="field"><label>Reception Place (IE banquet hall, auditorium, room etc..)*</label><input type="text"></div>
+        <div class="field"><span class="lbl">Is this an indoor or outdoor event? (If the choir is performing outside, the stage area needs to be tented or full-covered.)*</span>
+          <div class="opts"><label><input type="radio" name="io">Indoor</label><label><input type="radio" name="io">Outdoor</label><label><input type="radio" name="io">Both</label></div></div>
+        <div class="field"><label>How many guests are approximately attending your event? (This information is important so we can determine what size sound system to bring in to properly accommodate your event if needed)*</label><input type="text"></div>
+        <div class="field"><span class="lbl">Pure Harmony Choir can provide between 1-10 choir members including piano, drums, bass guitar, and lead guitar. Please select from options below your interest to receive quote(s). *</span>
+          <div class="opts"><label><input type="checkbox">Soloist</label><label><input type="checkbox">Duo</label><label><input type="checkbox">3-4 Piece Choir</label><label><input type="checkbox">5-6 Piece Choir</label><label><input type="checkbox">7-10 Piece Choir</label><label><input type="checkbox">Piano</label><label><input type="checkbox">Drums</label><label><input type="checkbox">Bass Guitar</label><label><input type="checkbox">Lead Guitar</label></div></div>
+        <div class="field"><span class="lbl">Sound Equipment and Production*</span>
+          <div class="opts one"><label><input type="radio" name="se">The choir needs to provide sound equipment and production for themselves.</label><label><input type="radio" name="se">I or the venue will provide all sound equipment and production for the choir.</label><label><input type="radio" name="se">I would like you to provide sound equipment and production for my event.</label></div></div>
+        <div class="field"><label>Tell us about your vision. What atmosphere or experience would you like to create? Feel free to share music preferences, inspiration, special requests or anything else you'd like us to know. (We will learn up to 3 new songs)*</label><textarea></textarea></div>
+        <div class="field"><span class="lbl">Our Partner, Rosarrio Entertainment, also provides these services: Please select from options below your interest to receive quote(s).*</span>
+          <div class="opts"><label><input type="checkbox">DJ BIANCA ROSARRIO</label><label><input type="checkbox">CELLIST</label><label><input type="checkbox">HARPIST</label><label><input type="checkbox">VIOLINIST</label><label><input type="checkbox">STRING QUARTET</label><label><input type="checkbox">PHOTOGRAPHERS</label><label><input type="checkbox">VIDEOGRAPHERS</label></div></div>
+        <div class="field"><label>Estimated Music Budget*</label><select><option>Under $1,000</option><option>$1,000 - $2,500</option><option>$2,500 - $5,000</option><option>$5,000 - $10,000</option><option>$10,000 +</option><option>Not Sure - Please recommend</option></select></div>
+        <div class="field"><label>Accommodations ( travel, lodging, meals) *</label><input type="text"></div>
+        <div class="field"><label>How did you hear about us?*</label><input type="text"></div>
+        <div class="submit"><button class="btn solid" type="submit">Submit</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fname">Pure Harmony Choir</p>
+    <p class="ftag">THE LUXURY SOUND YOU DESERVE</p>
+    <ul>
+      <li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Our Services</a></li><li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <p class="copy">© Pure Harmony Choir, LLC 2024-2026</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pages=['home','about','services','contact'];
+  function go(){
+    var h=(location.hash||'#home').slice(1); if(pages.indexOf(h)<0)h='home';
+    pages.forEach(function(p){document.getElementById(p).classList.toggle('show',p===h)});
+    document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('active',a.dataset.p===h)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',go);go();
+})();
+</script>
+</body>
+</html>
