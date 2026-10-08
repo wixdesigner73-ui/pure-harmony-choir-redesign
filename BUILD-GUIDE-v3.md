@@ -98,7 +98,7 @@ Fade-in H1, tagline and photo. No overlay anywhere.
 
 ### 4.2 Info bar — white box x 40, y 560, w 900, h 120 (radius 16, shadow) 
 It straddles the wave: **if Classic lets you drop it across the strip boundary, do** (it overflows into the ivory strip); **otherwise** keep the bar fully inside the ivory strip below and give that strip 60 px extra top padding.
-Four equal columns (225 px) separated by 1 px `#D8CDB8` lines. Each: gold rule 28 × 2 (y +26) → title Playfair 21 px (y +42) → sub-line Lato 13 px `#5C554B` (y +90). Whole column links → Our Services.
+Four equal columns (225 px) separated by 1 px `#D8CDB8` lines. Each: **tag line** (y +24: Lato Bold 10 px, caps, spacing ≈ 260) → title Playfair 21 px (y +46) → sub-line Lato 13 px `#5C554B` (y +94). Tags: column 1 = **MAIN SERVICE** (button color); columns 2–4 = **TRUSTED PARTNER** (gold deep `#80622F`). Whole column links → Our Services.
 1. **Artistic Performance** — *Live Vocalists & Music Curation · Musical Direction*
 2. **Ceremonial Elegance** — *Wedding Officiants · Memorial Ceremony Leadership*
 3. **Cinematic Capture** — *Photography · Videography*
@@ -115,6 +115,9 @@ Eyebrow "ABOUT US" (gold deep) · lede (verbatim, v1 §4.3) in Playfair *Italic*
 | Our Services | `services-main.jpg` | focus top-center | Services |
 | Florida | `about-florida.jpg` | none | About |
 | Georgia | `about-georgia.jpg` | none | About |
+
+### 4.4b Music reel — "Sample Our Music" (new, for your YouTube clips)
+Ivory-deep strip, height ≈ 560 (Method A in `YOUTUBE-SECTION.md`: ≈ 760). Eyebrow "LISTEN" (gold deep) x 40, y 80 · H2 "Sample Our Music" Playfair 44, ink, y 104 · two round arrow buttons (46 × 46, 1 px gold, radius 50; hover = button color) right-aligned at x 842 / 894, y 112 · a row of **400 × 225 (16:9)** clips, radius 16, gap 22, starting x 40 so the third clip is cut off at the right edge (that cue tells visitors to scroll) · "Song title" Playfair 22 below each. Full build options (playlist embed, Pro Gallery slider, slideshow strip) and how to add new clips later: see **`YOUTUBE-SECTION.md`**. The mockup slides are placeholders.
 
 ### 4.5 Booking banner — ivory, height 460
 One rounded (16) container x 40, y 20, w 900, h 420, split in two:
@@ -144,7 +147,11 @@ One rounded (16) container x 40, y 20, w 900, h 420, split in two:
 ## 6. OUR SERVICES — **Dark title block → floating banner → 2×2 cards → Contact button → Closing band**
 - Title block as §5 ("Our Services").
 - Floating banner: `services-main.jpg`, w 900, h 420, radius 16, shadow, focus top-center.
-- **Cards** (ivory, h ≈ 900): 2 × 2, each **437 × ~380**, x 40 / 503, gap 26; fill `#FFFFFF`, radius 16, soft shadow (y 10, blur 34, 8 %), **3 px gold top border** (add a 437 × 3 gold box on the card's top edge), inner padding 40. Category title Playfair *Italic* 32 → rule → two entries (title Playfair SemiBold 19, body Lato 15 `#5C554B`; 28 px between). All text verbatim, v1 §6.3. Order: Artistic (TL), Ceremonial (TR), Cinematic (BL), Custom (BR).
+- **Hierarchy (important):** Artistic Performance is your **main service**; the other three are provided by **Trusted Partners**. The page shows this in three ways: a dark feature card, a labelled divider heading, and a tag on every partner row.
+- **Feature card — Artistic Performance** (ivory strip, first item): box x 40, w 900, fill dark color, radius 16, soft shadow, padding 54/56. Eyebrow **"OUR MAIN SERVICE"** (accent color, Lato Bold 11.5, spacing ≈ 340) · H2 "Artistic Performance" Playfair 46, cream · rule 48 × 2 · two entries side by side (each w 380, 44 px gap): title Playfair SemiBold 21 cream, body Lato 15 `#CFC6B4`.
+- **Divider heading** 92 px below the feature card: H2 **"Provided by Our Trusted Partners"** (Playfair *Italic* 36, ink, centered) + centered rule. *(Wording is mine, built from your note — edit as you like.)*
+- **Partner rows** (3, each w 900, white, radius 16, soft shadow, 3 px gold **left** border, padding 40/44, 22 px apart): left column (w 250): eyebrow **"TRUSTED PARTNER"** (Lato Bold 11.5, gold deep) → category in Playfair *Italic* 30 → rule · right column: two entries side by side (each w ≈ 290; title Playfair SemiBold 19, body Lato 15 `#5C554B`). Order: Ceremonial Elegance, Cinematic Capture, Custom Event Design. Text verbatim, v1 §6.3.
+- Mobile: all of this stacks into single column; the feature card keeps its dark fill so the main service stays the first thing seen.
 - **"CONTACT US →"** Dark pill, centered, 56 px below the cards.
 
 ## 7. CONTACT US — **Dark title block → floating banner → Inquiry + form → Closing band**
@@ -174,4 +181,7 @@ Follow v1 §9 plus:
 - [ ] No text is placed over a person's face (Booking banner uses a solid panel).
 - [ ] Lede on Home and About are ink-colored (not grey).
 - [ ] Palette used consistently: pick Brand **or** Reference, don't mix.
+- [ ] Services: the dark "Our Main Service" card is first; the three partner rows each show "TRUSTED PARTNER".
+- [ ] Home info bar shows MAIN SERVICE on Artistic Performance and TRUSTED PARTNER on the other three.
+- [ ] "Sample Our Music": clips are 16:9, autoplay off, next clip peeks in at the right edge; checked in the Mobile Editor.
 - Plus v1 §12.

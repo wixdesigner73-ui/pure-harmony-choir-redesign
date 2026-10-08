@@ -208,3 +208,10 @@ Follow v1 §9, plus v2 specifics:
 - [ ] Playfair never below 26 px; Lato body 16 px.
 - [ ] Contact banner: all five faces visible at 1920, 1440 and 1280 widths.
 - Plus v1 §12 checklist.
+
+
+---
+
+## Update — Services hierarchy & YouTube clips
+- **Services:** Artistic Performance is the **main service**; Ceremonial Elegance, Cinematic Capture and Custom Event Design are provided by **Trusted Partners**. Add a small eyebrow above each category title — **"OUR MAIN SERVICE"** on Artistic Performance and **"TRUSTED PARTNER"** on the other three (Lato/Montserrat Bold 11.5–12 px, caps, spacing ≈ 280, gold deep). Shown in `mockup-v2.html`. For a stronger signal, see the feature-card + "Provided by Our Trusted Partners" layout in `BUILD-GUIDE-v3.md` §6.
+- **YouTube clips:** see `YOUTUBE-SECTION.md`.

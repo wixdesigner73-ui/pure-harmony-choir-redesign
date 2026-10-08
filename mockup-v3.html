@@ -142,6 +142,33 @@ nav a.active{color:var(--cream);border-bottom-color:var(--accent)}
 .card p{color:var(--muted);font-size:15px}
 .card .it+.it{margin-top:28px}
 
+.tg{display:block;font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);margin-bottom:14px}
+.tg.main{color:var(--btn)}
+.feature{background:var(--hero);border-radius:var(--r);padding:54px 56px 58px;box-shadow:0 14px 44px rgba(20,15,10,.18)}
+.feature h2{font-size:46px;color:var(--cream);margin-top:10px}
+.feature .rule{margin:18px 0 30px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.feature h3{color:var(--cream);font-size:21px;font-weight:600;margin-bottom:8px}
+.feature p{color:#CFC6B4;font-size:15px}
+.pt{margin:92px 0 38px}.pt h2{font-size:36px;font-style:italic}.pt .rule{margin-top:18px}
+.prow{background:var(--white);border-radius:var(--r);box-shadow:0 10px 34px rgba(20,15,10,.08);border-left:3px solid var(--gold);padding:40px 44px;display:grid;grid-template-columns:3fr 8fr;gap:44px;margin-bottom:22px}
+.prow h2{font-size:30px;font-style:italic;margin-top:10px}
+.prow .rule{margin:16px 0 0}
+.prow h3{font-size:19px;font-weight:600;margin-bottom:6px}
+.prow p{color:var(--muted);font-size:15px}
+.prow .two{gap:36px}
+/* music reel (YouTube clips) */
+.mhead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:30px;gap:20px}
+.mhead h2{font-size:44px;margin-top:8px}
+.arrows{display:flex;gap:10px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;transition:background .3s,color .3s}
+.arrows button:hover{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
+.reel{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.clip{flex:0 0 400px;scroll-snap-align:start}
+.vid{aspect-ratio:16/9;border-radius:var(--r);background:var(--hero);position:relative;display:grid;place-items:center;overflow:hidden}
+.vid .play{width:62px;height:62px;border-radius:50%;background:var(--btn);color:var(--btn-text);display:grid;place-items:center;font-size:20px;padding-left:4px}
+.vid .ph{position:absolute;left:16px;bottom:12px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#CFC6B4;font-weight:700}
+.clip h3{font-size:22px;margin-top:14px}
 /* contact */
 .cgrid{display:grid;grid-template-columns:4fr 7fr;gap:64px;align-items:start}
 .cgrid h2{font-size:34px;font-style:italic}
@@ -169,7 +196,9 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
   .bar{grid-template-columns:1fr 1fr}.bar a{border-left:0;border-top:1px solid var(--hair)}.bar a:nth-child(-n+2){border-top:0}
   .float{margin-top:-70px}
   .band{padding:64px 0}.lede{font-size:24px}
-  .tiles,.locs,.cards,.mgr,.cgrid,.close .pair{grid-template-columns:1fr;gap:22px}
+  .tiles,.locs,.cards,.mgr,.cgrid,.close .pair,.two,.prow{grid-template-columns:1fr;gap:22px}
+  .feature{padding:34px 24px}.feature h2{font-size:34px}.prow{padding:30px 24px}.pt h2{font-size:28px}
+  .clip{flex-basis:84%}.mhead h2{font-size:32px}
   .feat{grid-template-columns:1fr}.feat>img{order:1;height:240px}.feat .in{order:2;padding:34px 26px}.feat h2{font-size:38px}
   .ptop h1{font-size:46px}.floatimg img{height:240px}
   .form{padding:28px 20px}.opts{grid-template-columns:1fr}
@@ -200,10 +229,10 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
   </div>
 
   <div class="float"><div class="bar">
-    <a href="#services"><div class="rule"></div><h3>Artistic Performance</h3><p>Live Vocalists &amp; Music Curation · Musical Direction</p></a>
-    <a href="#services"><div class="rule"></div><h3>Ceremonial Elegance</h3><p>Wedding Officiants · Memorial Ceremony Leadership</p></a>
-    <a href="#services"><div class="rule"></div><h3>Cinematic Capture</h3><p>Photography · Videography</p></a>
-    <a href="#services"><div class="rule"></div><h3>Custom Event Design</h3><p>Luxury Event Stationery · Visual Branding &amp; Monograms</p></a>
+    <a href="#services"><span class="tg main">Main Service</span><h3>Artistic Performance</h3><p>Live Vocalists &amp; Music Curation · Musical Direction</p></a>
+    <a href="#services"><span class="tg">Trusted Partner</span><h3>Ceremonial Elegance</h3><p>Wedding Officiants · Memorial Ceremony Leadership</p></a>
+    <a href="#services"><span class="tg">Trusted Partner</span><h3>Cinematic Capture</h3><p>Photography · Videography</p></a>
+    <a href="#services"><span class="tg">Trusted Partner</span><h3>Custom Event Design</h3><p>Luxury Event Stationery · Visual Branding &amp; Monograms</p></a>
   </div></div>
 
   <section class="band center">
@@ -226,7 +255,21 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
     </div>
   </section>
 
-  <section style="padding-bottom:30px">
+  <section class="band" id="music" style="background:var(--ivory-deep);padding:90px 0 70px">
+    <div class="wrap">
+      <div class="mhead"><div><p class="eyebrow">Listen</p><h2>Sample Our Music</h2></div><div class="arrows"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button></div></div>
+      <!-- Placeholders only. In Wix each slide becomes a YouTube clip (see YOUTUBE-SECTION.md). -->
+      <div class="reel" id="reel">
+          <div class="clip"><div class="vid"><span class="play">▶</span><span class="ph">YouTube clip 1</span></div><h3>Song title</h3></div>
+          <div class="clip"><div class="vid"><span class="play">▶</span><span class="ph">YouTube clip 2</span></div><h3>Song title</h3></div>
+          <div class="clip"><div class="vid"><span class="play">▶</span><span class="ph">YouTube clip 3</span></div><h3>Song title</h3></div>
+          <div class="clip"><div class="vid"><span class="play">▶</span><span class="ph">YouTube clip 4</span></div><h3>Song title</h3></div>
+          <div class="clip"><div class="vid"><span class="play">▶</span><span class="ph">YouTube clip 5</span></div><h3>Song title</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:90px 0 30px">
     <div class="wrap">
       <div class="feat on-dark">
         <img src="images/contact-main.jpg" alt="Five members of Pure Harmony Choir performing">
@@ -283,20 +326,19 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
   <div class="floatimg"><img src="images/services-main.jpg" style="object-position:50% 24%" alt="A member of Pure Harmony Choir in a white shirt"></div>
 
   <section class="band" style="padding-top:80px">
-    <div class="wrap"><div class="cards">
-      <div class="card"><h2>Artistic Performance</h2><div class="rule"></div>
-        <div class="it"><h3>Live Vocalists &amp; Music Curation</h3><p>Whether you're walking down the aisle or honoring a life well-lived, the right music transforms the moment. Our carefully selected vocalists and musicians deliver live, soul-stirring performances tailored to your event's tone and vision.</p></div>
-        <div class="it"><h3>Musical Direction</h3><p>From intimate weddings to elegant gatherings, we offer custom arrangements, vocal blends, and curated sound experiences that enhance the emotional journey of your event.</p></div></div>
-      <div class="card"><h2>Ceremonial Elegance</h2><div class="rule"></div>
-        <div class="it"><h3>Wedding Officiants</h3><p>Your ceremony should feel as personal as your love story. Our officiants specialize in crafting and delivering beautiful, tailored ceremonies that honor your unique journey with warmth, style, and grace.</p></div>
-        <div class="it"><h3>Memorial Ceremony Leadership</h3><p>In times of remembrance, we offer more than words—we offer presence, poetry, and peace. Our team creates and delivers personalized tribute services that honor the life and legacy of your loved ones with heartfelt dignity.</p></div></div>
-      <div class="card"><h2>Cinematic Capture</h2><div class="rule"></div>
-        <div class="it"><h3>Photography</h3><p>Our photographers specialize in timeless, editorial-style captures with an eye for authentic emotion, luxurious detail, and natural beauty.</p></div>
-        <div class="it"><h3>Videography</h3><p>More than a recap—our films tell your story. We deliver cinematic, emotionally rich highlight reels and full-length features for weddings, memorials, and special occasions.</p></div></div>
-      <div class="card"><h2>Custom Event Design</h2><div class="rule"></div>
-        <div class="it"><h3>Luxury Event Stationery</h3><p>Our design team creates sophisticated printed pieces including invitations, programs, signage, and menus. Each design is crafted to reflect your vision with elegance and intention.</p></div>
-        <div class="it"><h3>Visual Branding &amp; Monograms</h3><p>Add a signature touch to your event with custom monograms, logos, or cohesive visual design across all your printed and digital elements.</p></div></div>
-    </div>
+    <div class="wrap">
+      <div class="feature on-dark">
+        <span class="eyebrow lt">Our Main Service</span>
+        <h2>Artistic Performance</h2><div class="rule"></div>
+        <div class="two">
+          <div class="it"><h3>Live Vocalists &amp; Music Curation</h3><p>Whether you're walking down the aisle or honoring a life well-lived, the right music transforms the moment. Our carefully selected vocalists and musicians deliver live, soul-stirring performances tailored to your event's tone and vision.</p></div>
+          <div class="it"><h3>Musical Direction</h3><p>From intimate weddings to elegant gatherings, we offer custom arrangements, vocal blends, and curated sound experiences that enhance the emotional journey of your event.</p></div>
+        </div>
+      </div>
+      <div class="pt center"><h2>Provided by Our Trusted Partners</h2><div class="rule c"></div></div>
+      <div class="prow"><div><span class="eyebrow">Trusted Partner</span><h2>Ceremonial Elegance</h2><div class="rule"></div></div><div class="two"><div class="it"><h3>Wedding Officiants</h3><p>Your ceremony should feel as personal as your love story. Our officiants specialize in crafting and delivering beautiful, tailored ceremonies that honor your unique journey with warmth, style, and grace.</p></div><div class="it"><h3>Memorial Ceremony Leadership</h3><p>In times of remembrance, we offer more than words—we offer presence, poetry, and peace. Our team creates and delivers personalized tribute services that honor the life and legacy of your loved ones with heartfelt dignity.</p></div></div></div>
+      <div class="prow"><div><span class="eyebrow">Trusted Partner</span><h2>Cinematic Capture</h2><div class="rule"></div></div><div class="two"><div class="it"><h3>Photography</h3><p>Our photographers specialize in timeless, editorial-style captures with an eye for authentic emotion, luxurious detail, and natural beauty.</p></div><div class="it"><h3>Videography</h3><p>More than a recap—our films tell your story. We deliver cinematic, emotionally rich highlight reels and full-length features for weddings, memorials, and special occasions.</p></div></div></div>
+      <div class="prow"><div><span class="eyebrow">Trusted Partner</span><h2>Custom Event Design</h2><div class="rule"></div></div><div class="two"><div class="it"><h3>Luxury Event Stationery</h3><p>Our design team creates sophisticated printed pieces including invitations, programs, signage, and menus. Each design is crafted to reflect your vision with elegance and intention.</p></div><div class="it"><h3>Visual Branding &amp; Monograms</h3><p>Add a signature touch to your event with custom monograms, logos, or cohesive visual design across all your printed and digital elements.</p></div></div></div>
     <div class="center" style="margin-top:56px"><a class="btn dk" href="#contact">Contact Us &nbsp;→</a></div></div>
   </section>
 </main>
@@ -369,6 +411,9 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
     window.scrollTo(0,0);
   }
   window.addEventListener('hashchange',go);go();
+  var reel=document.getElementById('reel');
+  document.getElementById('next').onclick=function(){reel.scrollBy({left:422,behavior:'smooth'})};
+  document.getElementById('prev').onclick=function(){reel.scrollBy({left:-422,behavior:'smooth'})};
   var sw=document.getElementById('sw');
   sw.onclick=function(){var r=document.body.classList.toggle('ref');sw.textContent=r?'PALETTE: REFERENCE · tap for BRAND':'PALETTE: BRAND · tap for REFERENCE'};
   if(location.search.indexOf('ref')>-1)sw.click();

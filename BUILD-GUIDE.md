@@ -283,3 +283,10 @@ Re-upload the files from `images/` (they are the originals pulled from the Wix m
 - [ ] Submit a test inquiry through the restyled form.
 - [ ] Premium plan + domain connected so the Wix ad bar is gone.
 - [ ] Page SEO titles and alt text set.
+
+
+---
+
+## Update — Services hierarchy & YouTube clips
+- **Services:** Artistic Performance is the **main service**; Ceremonial Elegance, Cinematic Capture and Custom Event Design are provided by **Trusted Partners**. Add a small eyebrow above each category title — **"OUR MAIN SERVICE"** on Artistic Performance and **"TRUSTED PARTNER"** on the other three (Lato/Montserrat Bold 11.5–12 px, caps, spacing ≈ 280, gold deep). Shown in `mockup.html`. For a stronger signal, see the feature-card + "Provided by Our Trusted Partners" layout in `BUILD-GUIDE-v3.md` §6.
+- **YouTube clips:** see `YOUTUBE-SECTION.md`.
