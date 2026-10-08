@@ -215,3 +215,5 @@ Follow v1 §9, plus v2 specifics:
 ## Update — Services hierarchy & YouTube clips
 - **Services:** Artistic Performance is the **main service**; Ceremonial Elegance, Cinematic Capture and Custom Event Design are provided by **Trusted Partners**. Add a small eyebrow above each category title — **"OUR MAIN SERVICE"** on Artistic Performance and **"TRUSTED PARTNER"** on the other three (Lato/Montserrat Bold 11.5–12 px, caps, spacing ≈ 280, gold deep). Shown in `mockup-v2.html`. For a stronger signal, see the feature-card + "Provided by Our Trusted Partners" layout in `BUILD-GUIDE-v3.md` §6.
 - **YouTube clips:** see `YOUTUBE-SECTION.md`.
+
+- **Home page — main service:** add a full-width **"Our Main Service — Artistic Performance"** feature right after the hero (dark panel, `contact-main.jpg` left, existing Artistic Performance text right, "OUR SERVICES" button) — see the Home page of the matching mockup and `BUILD-GUIDE-v3.md` §4.2b for dimensions.

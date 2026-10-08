@@ -78,6 +78,25 @@ nav a.active{color:var(--cream);border-bottom-color:var(--accent)}
 .bar p{font-size:13px;color:var(--muted);line-height:1.55;margin-top:8px}
 .bar .rule{margin:0 auto 16px;width:28px}
 
+.bar2{background:var(--white);border-radius:var(--r);box-shadow:0 14px 44px rgba(20,15,10,.14);display:grid;grid-template-columns:1.25fr 1fr;overflow:hidden}
+.bar2 .m{background:var(--hero);padding:40px 46px 42px;display:block;color:var(--cream)}
+.bar2 .m .tg{color:var(--accent);font-size:11px}
+.bar2 .m h3{font-size:38px;color:var(--cream);margin:0 0 12px;line-height:1.05}
+.bar2 .m p{color:#CFC6B4;font-size:14px;margin-bottom:26px;line-height:1.6}
+.bar2 .ps{display:flex;flex-direction:column}
+.bar2 .ps a{display:block;padding:20px 32px;border-top:1px solid var(--hair);flex:1;transition:background .3s}
+.bar2 .ps a:first-child{border-top:0}
+.bar2 .ps a:hover{background:#FBF8F1}
+.bar2 .ps .tg{font-size:9.5px;margin-bottom:5px}
+.bar2 .ps h4{font-family:var(--serif);font-size:19px;font-weight:500;line-height:1.2}
+.bar2 .ps p{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:3px}
+.mainfeat{background:var(--hero);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:5fr 6fr;box-shadow:0 14px 44px rgba(20,15,10,.18)}
+.mainfeat>img{width:100%;height:100%;object-fit:cover;object-position:28% 50%;min-height:460px}
+.mainfeat .txt{padding:54px 56px 56px}
+.mainfeat h2{font-size:46px;color:var(--cream);margin-top:10px}
+.mainfeat .rule{margin:18px 0 26px}
+.mainfeat h3{font-size:20px;font-weight:600;color:var(--cream);margin:0 0 6px}
+.mainfeat p{color:#CFC6B4;font-size:15px;margin-bottom:22px}
 .band{padding:100px 0}
 .center{text-align:center}
 .lede{font-family:var(--serif);font-style:italic;font-size:36px;line-height:1.32;max-width:780px;margin:20px auto 0}
@@ -93,7 +112,7 @@ nav a.active{color:var(--cream);border-bottom-color:var(--accent)}
 
 /* featured banner */
 .feat{border-radius:var(--r);overflow:hidden;min-height:420px;display:grid;grid-template-columns:2fr 3fr;background:var(--hero)}
-.feat>img{width:100%;height:100%;object-fit:cover;object-position:78% 40%;order:2}
+.feat>img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;order:2}
 .feat .in{padding:0 48px;display:flex;flex-direction:column;justify-content:center;order:1}
 .feat h2{font-size:54px;color:var(--cream);line-height:1.05;margin:14px 0 30px}
 .feat .side{font-size:11.5px;letter-spacing:.3em;color:var(--accent);font-weight:700;margin-top:34px}
@@ -195,6 +214,8 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
   .arch img{border-radius:90px 90px var(--r) var(--r)}
   .bar{grid-template-columns:1fr 1fr}.bar a{border-left:0;border-top:1px solid var(--hair)}.bar a:nth-child(-n+2){border-top:0}
   .float{margin-top:-70px}
+  .bar2,.mainfeat{grid-template-columns:1fr}.bar2 .m{padding:30px 26px}.bar2 .m h3{font-size:30px}
+  .mainfeat>img{min-height:0;height:230px}.mainfeat .txt{padding:34px 24px}.mainfeat h2{font-size:34px}
   .band{padding:64px 0}.lede{font-size:24px}
   .tiles,.locs,.cards,.mgr,.cgrid,.close .pair,.two,.prow{grid-template-columns:1fr;gap:22px}
   .feature{padding:34px 24px}.feature h2{font-size:34px}.prow{padding:30px 24px}.pt h2{font-size:28px}
@@ -228,12 +249,30 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
     <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,70 C240,115 520,20 820,52 C1100,82 1280,110 1440,60 L1440,110 L0,110 Z"/></svg>
   </div>
 
-  <div class="float"><div class="bar">
-    <a href="#services"><span class="tg main">Main Service</span><h3>Artistic Performance</h3><p>Live Vocalists &amp; Music Curation · Musical Direction</p></a>
-    <a href="#services"><span class="tg">Trusted Partner</span><h3>Ceremonial Elegance</h3><p>Wedding Officiants · Memorial Ceremony Leadership</p></a>
-    <a href="#services"><span class="tg">Trusted Partner</span><h3>Cinematic Capture</h3><p>Photography · Videography</p></a>
-    <a href="#services"><span class="tg">Trusted Partner</span><h3>Custom Event Design</h3><p>Luxury Event Stationery · Visual Branding &amp; Monograms</p></a>
+  <div class="float"><div class="bar2">
+    <a class="m" href="#services"><span class="tg main">Our Main Service</span><h3>Artistic Performance</h3><p>Live Vocalists &amp; Music Curation · Musical Direction</p><span class="btn">Our Services &nbsp;→</span></a>
+    <div class="ps">
+      <a href="#services"><span class="tg">Trusted Partner</span><h4>Ceremonial Elegance</h4><p>Wedding Officiants · Memorial Ceremony Leadership</p></a>
+      <a href="#services"><span class="tg">Trusted Partner</span><h4>Cinematic Capture</h4><p>Photography · Videography</p></a>
+      <a href="#services"><span class="tg">Trusted Partner</span><h4>Custom Event Design</h4><p>Luxury Event Stationery · Visual Branding &amp; Monograms</p></a>
+    </div>
   </div></div>
+
+  <!-- MAIN SERVICE feature (existing Artistic Performance copy, verbatim) -->
+  <section style="padding:100px 0 0">
+    <div class="wrap">
+      <div class="mainfeat on-dark">
+        <img src="images/contact-main.jpg" alt="Five members of Pure Harmony Choir performing">
+        <div class="txt">
+          <span class="eyebrow lt">Our Main Service</span>
+          <h2>Artistic Performance</h2><div class="rule"></div>
+          <h3>Live Vocalists &amp; Music Curation</h3><p>Whether you're walking down the aisle or honoring a life well-lived, the right music transforms the moment. Our carefully selected vocalists and musicians deliver live, soul-stirring performances tailored to your event's tone and vision.</p>
+          <h3>Musical Direction</h3><p>From intimate weddings to elegant gatherings, we offer custom arrangements, vocal blends, and curated sound experiences that enhance the emotional journey of your event.</p>
+          <div style="margin-top:30px"><a class="btn" href="#services">Our Services &nbsp;→</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="band center">
     <div class="wrap">
@@ -272,7 +311,7 @@ textarea{border:1px solid #B9AD94;border-radius:10px;padding:12px;min-height:130
   <section style="padding:90px 0 30px">
     <div class="wrap">
       <div class="feat on-dark">
-        <img src="images/contact-main.jpg" alt="Five members of Pure Harmony Choir performing">
+        <img src="images/gallery-1.jpg" alt="Four members of Pure Harmony Choir in black and white attire">
         <div class="in">
           <p class="eyebrow lt">Contact Us</p><h2>Booking<br>Inquiry</h2><div><a class="btn" href="#contact">Contact Us &nbsp;→</a></div>
           <p class="side">FLORIDA &nbsp;•&nbsp; GEORGIA</p>

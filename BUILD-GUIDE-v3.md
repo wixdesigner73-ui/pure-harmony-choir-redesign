@@ -96,13 +96,21 @@ Headings **Playfair Display** · body/nav **Lato** (same as v2 — see v2 §1 fo
 
 Fade-in H1, tagline and photo. No overlay anywhere.
 
-### 4.2 Info bar — white box x 40, y 560, w 900, h 120 (radius 16, shadow) 
-It straddles the wave: **if Classic lets you drop it across the strip boundary, do** (it overflows into the ivory strip); **otherwise** keep the bar fully inside the ivory strip below and give that strip 60 px extra top padding.
-Four equal columns (225 px) separated by 1 px `#D8CDB8` lines. Each: **tag line** (y +24: Lato Bold 10 px, caps, spacing ≈ 260) → title Playfair 21 px (y +46) → sub-line Lato 13 px `#5C554B` (y +94). Tags: column 1 = **MAIN SERVICE** (button color); columns 2–4 = **TRUSTED PARTNER** (gold deep `#80622F`). Whole column links → Our Services.
-1. **Artistic Performance** — *Live Vocalists & Music Curation · Musical Direction*
-2. **Ceremonial Elegance** — *Wedding Officiants · Memorial Ceremony Leadership*
-3. **Cinematic Capture** — *Photography · Videography*
-4. **Custom Event Design** — *Luxury Event Stationery · Visual Branding & Monograms*
+### 4.2 Main-service bar — white box x 40, y 560, w 900, h 250 (radius 16, shadow, clip to rounded corners)
+It straddles the wave: **if Classic lets you drop it across the strip boundary, do**; **otherwise** keep it fully inside the ivory strip below and give that strip 60 px extra top padding.
+**Two parts — the main service is visibly the lead:**
+- **Left panel (≈ 500 wide, full height): fill = dark color.** Tag "OUR MAIN SERVICE" (Lato Bold 11, caps, spacing ≈ 260, accent) · title **"Artistic Performance"** Playfair 38 px, cream · sub-line "Live Vocalists & Music Curation · Musical Direction" Lato 14 `#CFC6B4` · Primary pill "OUR SERVICES →". Whole panel links → Our Services.
+- **Right part (≈ 400 wide, white):** three equal rows separated by 1 px `#D8CDB8` lines, each linked to Our Services: tag **"TRUSTED PARTNER"** (Lato Bold 9.5, gold deep) → title Playfair 19 → sub-line Lato 12.5 `#5C554B`.
+  1. **Ceremonial Elegance** — *Wedding Officiants · Memorial Ceremony Leadership*
+  2. **Cinematic Capture** — *Photography · Videography*
+  3. **Custom Event Design** — *Luxury Event Stationery · Visual Branding & Monograms*
+
+### 4.2b Main-service feature (new) — ivory strip, height ≈ 560, right under the bar
+One rounded (16) container x 40, y 100, w 900, h 460, fill dark color, soft shadow; split 5/11 : 6/11.
+- **Left (x 40–450):** `contact-main.jpg` (live performance), focus left-center so the left singers and microphones stay in frame.
+- **Right (x 450–940, padding 56):** eyebrow **"OUR MAIN SERVICE"** (accent) · H2 **"Artistic Performance"** Playfair 46, cream · rule · **Live Vocalists & Music Curation** (Playfair SemiBold 20, cream) + its paragraph (Lato 15 `#CFC6B4`) · **Musical Direction** + its paragraph · Primary pill "OUR SERVICES →". Text is verbatim from the Services page (v1 §6.3).
+- Mobile: image on top (350 × 230), text below, same dark fill.
+- The Booking Inquiry banner (§4.5) now uses `gallery-1.jpg` (focus center-top) because the performance photo moved to this feature.
 
 ### 4.3 About lede — ivory, height 500 (starts below the bar)
 Eyebrow "ABOUT US" (gold deep) · lede (verbatim, v1 §4.3) in Playfair *Italic* 36, centered, w 780 · rule · "ABOUT US →" Dark pill.
@@ -182,6 +190,6 @@ Follow v1 §9 plus:
 - [ ] Lede on Home and About are ink-colored (not grey).
 - [ ] Palette used consistently: pick Brand **or** Reference, don't mix.
 - [ ] Services: the dark "Our Main Service" card is first; the three partner rows each show "TRUSTED PARTNER".
-- [ ] Home info bar shows MAIN SERVICE on Artistic Performance and TRUSTED PARTNER on the other three.
+- [ ] Home: the dark Artistic Performance panel is the largest, first thing in the bar, the feature section directly under it repeats it in full, and the three partner rows are visibly smaller and tagged TRUSTED PARTNER.
 - [ ] "Sample Our Music": clips are 16:9, autoplay off, next clip peeks in at the right edge; checked in the Mobile Editor.
 - Plus v1 §12.
